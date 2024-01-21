@@ -21,6 +21,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.housingsociety.Fragments.Home;
+import com.example.housingsociety.Fragments.Profile;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(new Home());
                 }
                 else if(id == R.id.optProfile){
-//                    loadFragment(new Profile());
+                    loadFragment(new Profile());
                 }
                 else if(id == R.id.optLogout){
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
