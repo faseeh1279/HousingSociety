@@ -9,12 +9,13 @@
         android:layout_height="wrap_content"
         android:elevation="4dp"
         android:layout_marginHorizontal="5dp"
+        android:id="@+id/cardview"
         android:layout_marginVertical="5dp"
         app:cardCornerRadius="8dp">
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent">
-           <ImageView
+           <de.hdodenhof.circleimageview.CircleImageView
                android:layout_width="100dp"
                android:layout_height="100dp"
                android:id="@+id/ImageView"
@@ -23,22 +24,35 @@
            <TextView
                android:layout_width="match_parent"
                android:layout_height="50dp"
-               android:id="@+id/email"
+               android:id="@+id/name"
                android:layout_marginStart="10dp"
-               android:hint="Email"
+               android:hint="Name"
                android:gravity="center_vertical"
-               android:textSize="20sp"
-               android:layout_toEndOf="@+id/ImageView"/>
+               android:textSize="15sp"
+               android:layout_toEndOf="@+id/ImageView"
+               />
            <TextView
                android:layout_width="match_parent"
                android:layout_height="50dp"
-               android:id="@+id/password"
-               android:hint="Password"
+               android:id="@+id/phone"
                android:layout_marginStart="10dp"
-               android:textSize="20sp"
+               android:layout_toEndOf="@+id/ImageView"
+               android:hint="Phone"
+               android:gravity="center_vertical"
+               android:textSize="15sp"
+               android:layout_below="@+id/name"
+               />
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:id="@+id/fees"
+               android:hint="Fees"
+               android:layout_marginStart="10dp"
+               android:textSize="15sp"
                android:gravity="center_vertical"
                android:layout_toEndOf="@+id/ImageView"
-               android:layout_below="@+id/email"/>
+
+               android:layout_below="@+id/phone"/>
        </RelativeLayout>
 </androidx.cardview.widget.CardView>
 

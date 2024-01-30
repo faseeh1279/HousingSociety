@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -24,13 +25,13 @@ public class LoginPage extends AppCompatActivity {
 FirebaseAuth firebaseAuth;
 
 EditText ed1, ed2;
-Button btn_signup, btn_signin;
+Button btn_signin;
 
 SharedPreferences sharedPreferences;
 
 
 ProgressBar progressBar;
-
+TextView txt1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,8 @@ ProgressBar progressBar;
         ed1 = findViewById(R.id.email);
         ed2 = findViewById(R.id.password);
         btn_signin = findViewById(R.id.btn_sign_in);
-        btn_signup = findViewById(R.id.btn_sign_up);
+        txt1 = findViewById(R.id.registerNow);
+
         firebaseAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.INVISIBLE);
@@ -53,11 +55,10 @@ ProgressBar progressBar;
             Intent obj = new Intent(LoginPage.this, MainActivity.class);
             startActivity(obj);
         }
-        btn_signup.setOnClickListener(new View.OnClickListener() {
+        txt1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent obj = new Intent(LoginPage.this, SignUp.class);
-                startActivity(obj);
+            public void onClick(View view) {
+                startActivity(new Intent(LoginPage.this, SignUp.class));
             }
         });
         btn_signin.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +74,7 @@ ProgressBar progressBar;
                         editor.putString("email", email);
                         editor.putString("password", password);
                         editor.apply();
-                        Toast.makeText(LoginPage.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginPage.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         Intent obj = new Intent(LoginPage.this, MainActivity.class);
                         startActivity(obj);
                     }

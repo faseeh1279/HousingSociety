@@ -3,25 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@drawable/homepagegradient"
+    android:background="#0C75C9"
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        />
-
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="30dp"
+        android:src="@drawable/default_profile_image" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Touring Application"
         android:textSize="40sp"
+        android:id="@+id/txt"
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:textStyle="bold"

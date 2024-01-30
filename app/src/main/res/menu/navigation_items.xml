@@ -9,6 +9,11 @@
         />
 
     <item
+        android:id="@+id/optAdmin"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Admin"
+        />
+    <item
         android:id="@+id/optProfile"
         android:title="Profile"
         android:icon="@drawable/baseline_person_24"
@@ -19,4 +24,5 @@
         android:title="Log Out"
         android:icon="@drawable/baseline_logout_24"
         />
+
 </menu>

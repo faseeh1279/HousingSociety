@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "HousingSociety"
 include(":app")
+include(":workermodule")
